@@ -32,3 +32,9 @@ passwordInput.addEventListener("keyup", () => {
         
     }
 })
+const createAccountBtn = document.getElementById('btn primary');
+    const registrationForm = document.getElementById('form-forma');
+    const registrationStatus = document.getElementById('registerationStatus')
+
+    // Add click event listener to the "Create Account" button
+    createAccountBtn.addEventListener('click', handleRegistration);

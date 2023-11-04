@@ -199,6 +199,11 @@ input{
        
     }
 }
+.regiregisterationStatus
+{
+    background-color: #F08080;
+    padding-top:25%;
+}
 
 @media screen and (max-width:990px) and (min-width:665px){
     .action-btn{
