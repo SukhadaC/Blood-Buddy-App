@@ -32,17 +32,17 @@
         <h1>Start Saving Lives</h1>
         <form class="form-forma" id="form-forma">
             <i class="fas fa-user icon"></i>
-            <input type="text" placeholder="Name" >
+            <input type="text" placeholder="Name" id="Name" >
             <br>
             <i class="fas fa-envelope-square"></i>
-            <input type="email" placeholder="E-mail" >
+            <input type="email" placeholder="E-mail" id="email" >
             <br>
             <i class="fas fa-lock"></i>
             <input type="password" placeholder="Password" id="password_data" >
             <div class="safety" style="font-family: sans-serif; font-size: 20px;">
             </div>
             <div class="action-btn">
-                <button class="btn primary" id="btn primary">Create Account</button>
+                <button class="btn primary" id="btn primary" onclick="callAPI()">Create Account</button>
                 
             </div>
         </form>
