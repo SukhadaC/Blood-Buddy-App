@@ -43,7 +43,8 @@ var callAPI=()=>
     // add content type header to object
     myHeaders.append("Content-Type", "application/json");
     // using built in JSON utility package turn object to string and store in a variable
-    var raw =[email,names,password]
+    var raw = JSON.stringify({ email, names, password });
+
     // create a JSON object with parameters for API call and store in a variable
     var requestOptions = {
         method: 'POST',
@@ -52,10 +53,8 @@ var callAPI=()=>
         redirect: 'follow'
     };
     // make API call with parameters and use promises to get response
-    fetch('https://ksafkqrqj4.execute-api.ap-south-1.amazonaws.com/dev', {
-    method: 'GET',
-    mode: 'cors'
-})
+    fetch('https://ksafkqrqj4.execute-api.ap-south-1.amazonaws.com/dev', requestOptions)
+
 .then(response => response.json())
 .then(data => console.log(data))
 .catch(error => console.error(error));
@@ -66,4 +65,4 @@ const createAccountBtn = document.getElementById('btn primary');
     const registrationStatus = document.getElementById('registerationStatus')
 
     // Add click event listener to the "Create Account" button
-    createAccountBtn.addEventListener('click', callAPI());
+    createAccountBtn.addEventListener('click', callAPI);
