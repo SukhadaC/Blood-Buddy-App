@@ -52,9 +52,13 @@ var callAPI=()=>
         redirect: 'follow'
     };
     // make API call with parameters and use promises to get response
-    fetch("https://ksafkqrqj4.execute-api.ap-south-1.amazonaws.com/dev", requestOptions)
-    .then(response => response.text())
-    .catch(error => console.log('error', error));
+    fetch('https://ksafkqrqj4.execute-api.ap-south-1.amazonaws.com/dev', {
+    method: 'GET',
+    mode: 'cors'
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error(error));
 
 }
 const createAccountBtn = document.getElementById('btn primary');
