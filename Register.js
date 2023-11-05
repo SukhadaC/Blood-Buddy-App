@@ -43,7 +43,7 @@ var callAPI=()=>
     // add content type header to object
     myHeaders.append("Content-Type", "application/json");
     // using built in JSON utility package turn object to string and store in a variable
-    var raw =["01",email,password]
+    var raw =[email,names,password]
     // create a JSON object with parameters for API call and store in a variable
     var requestOptions = {
         method: 'POST',
@@ -52,7 +52,7 @@ var callAPI=()=>
         redirect: 'follow'
     };
     // make API call with parameters and use promises to get response
-    fetch("https://2es4gkfmcl.execute-api.ap-south-1.amazonaws.com/dev", requestOptions)
+    fetch("https://ksafkqrqj4.execute-api.ap-south-1.amazonaws.com/dev", requestOptions)
     .then(response => response.text())
     .catch(error => console.log('error', error));
 
