@@ -54,7 +54,6 @@ var callAPI=()=>
     // make API call with parameters and use promises to get response
     fetch("https://2es4gkfmcl.execute-api.ap-south-1.amazonaws.com/dev", requestOptions)
     .then(response => response.text())
-    .then(result => alert(JSON.parse(result).body))
     .catch(error => console.log('error', error));
 
 }
